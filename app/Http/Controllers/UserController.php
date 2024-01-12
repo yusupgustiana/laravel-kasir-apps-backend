@@ -44,7 +44,7 @@ class UserController extends Controller
         //     'roles' => 'required|in:ADMIN,USER',
 
         // ]);
-        $dd = $request->all();
+      
 
         $data = $request->all();
         $data['password'] = Hash::make($request->password);

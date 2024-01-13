@@ -44,7 +44,7 @@ class UserController extends Controller
         //     'roles' => 'required|in:ADMIN,USER',
 
         // ]);
-      
+
 
         $data = $request->all();
         $data['password'] = Hash::make($request->password);
@@ -60,7 +60,7 @@ class UserController extends Controller
     public function update(UpdateUserRequest $request, User $user)
     {
         $data = $request->validated();
-        $user = \App\Models\User::findOrFail($id);
+        $user = \App\Models\User::findOrFail($user->id);
         $data['password'] = Hash::make($request->password);
         $user->update($data);
         return redirect()->route('user.index')->with('success', 'User updated successfully');

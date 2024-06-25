@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('title', 'Products')
 
@@ -12,9 +12,6 @@
         <section class="section">
             <div class="section-header">
                 <h1>Product</h1>
-                <div class="section-header-button">
-                    <a href="{{ route('product.create') }}" class="btn btn-primary">Add New</a>
-                </div>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
@@ -79,10 +76,22 @@
                 </div>
             </div>
 
+            <div class="section-header-button">
+                <a href="{{ route('product.create') }}" class="btn btn-primary">Add New</a>
+            </div>
+            <div class="section-header-breadcrumb">
+                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                <div class="breadcrumb-item"><a href="#">Products</a></div>
+                <a class="nav-link" href="{{ route('product.index') }}">All Products</a>
+            </div>
+
             <div class="section-body">
                 <div class="row mt-4">
                     <div class="col-12">
                         <div class="card">
+                            <div class="card-header">
+                                <a href="{{ route('product.index') }}" style="font-weight: bold">All Products</a>
+                            </div>
                             <div class="card-body">
                                 <div class="float-left">
                                     <form id="filter-form" method="GET" action="{{ route('product.index') }}">
@@ -183,4 +192,4 @@
             });
         });
     </script>
-@endpush
+@endpush --}}

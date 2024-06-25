@@ -4,12 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\StoreUserRequest;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
-
 
 class AuthController extends Controller
 {
@@ -57,27 +52,37 @@ class AuthController extends Controller
     {
         $loginData = $request->validate([
             'email' => 'required|email',
-            'password' => 'required|string'
+            'password' => 'required',
         ]);
+
         $user = \App\Models\User::where('email', $request->email)->first();
 
         if (!$user) {
-            return response(['message' => 'Email is incorrect'], 404);
+            return response([
+                'message' => ['Email not found'],
+            ], 404);
         }
+
         if (!Hash::check($request->password, $user->password)) {
-            return response(['message' => ' Password is incorrect'], 404);
+            return response([
+                'message' => ['Password is wrong'],
+            ], 404);
         }
-        $token = $user->createToken('myapptoken')->plainTextToken;
+
+        $token = $user->createToken('auth_token')->plainTextToken;
+
         return response([
             'user' => $user,
             'token' => $token,
         ], 200);
-
     }
+
     //logout
     public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
-        return response()->json(['message' => 'Logout successful'], 200);
+        return response()->json([
+            'message' => 'Logout success',
+        ]);
     }
 }

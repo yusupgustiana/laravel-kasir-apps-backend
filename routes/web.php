@@ -24,12 +24,6 @@ Route::middleware(['auth'])->group(function () {
     })->name('home');
     Route::resource('user', UserController::class);
     Route::resource('product', \App\Http\Controllers\ProductController::class);
+    Route::resource('order', \App\Http\Controllers\OrderController::class);
 
 });
-
-// Route::get('register', function () {
-//     return view('pages.auth.auth-register');
-// });
-// Route::get('users', function () {
-//     return view('pages.users.list-users');
-// });

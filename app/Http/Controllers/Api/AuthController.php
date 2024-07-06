@@ -85,4 +85,26 @@ class AuthController extends Controller
             'message' => 'Logout success',
         ]);
     }
+
+//     public function logout(Request $request)
+// {
+//     // Mendapatkan token saat ini yang digunakan oleh user yang sedang login
+//     $currentAccessToken = $request->user()->currentAccessToken();
+
+//     // Memeriksa apakah token yang digunakan dalam permintaan sama dengan token saat ini
+//     if ($request->bearerToken() !== $currentAccessToken->token) {
+//         return response()->json([
+//             'message' => 'Unauthorized logout attempt',
+//         ], 401);
+//     }
+
+//     // Menghapus token autentikasi yang sedang digunakan
+//     $currentAccessToken->delete();
+
+//     // Mengembalikan respons sukses
+//     return response()->json([
+//         'message' => 'Logout success',
+//     ]);
+// }
+
 }

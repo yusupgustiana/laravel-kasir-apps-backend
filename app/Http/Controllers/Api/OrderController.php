@@ -47,5 +47,5 @@ class OrderController extends Controller
             'message' => 'Order created successfully',
         ],201);
     }
-    
+
 }

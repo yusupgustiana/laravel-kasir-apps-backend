@@ -22,30 +22,16 @@
 
 
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Users</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Manage data Kasir</span></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="nav-link" href="{{ route('user.index') }}">All Users</a>
+                        <a class="nav-link" href="{{ route('user.index') }}">Users</a>
                     </li>
-
-                </ul>
-
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Product</span></a>
-                <ul class="dropdown-menu">
                     <li>
-                        <a class="nav-link" href="{{ route('product.index') }}">All Product</a>
+                        <a class="nav-link" href="{{ route('product.index') }}">Product</a>
                     </li>
-
-                </ul>
-
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Orders</span></a>
-                <ul class="dropdown-menu">
                     <li>
-                        <a class="nav-link" href="{{ route('order.index') }}">All Orders</a>
+                        <a class="nav-link" href="{{ route('order.index') }}">Orders</a>
                     </li>
 
                 </ul>

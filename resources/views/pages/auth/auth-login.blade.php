@@ -61,9 +61,7 @@
 
         </div>
     </div>
-    <div class="text-muted mt-5 text-center">
-        Don't have an account? <a href="auth-register.html">Create One</a>
-    </div>
+
 @endsection
 
 @push('scripts')

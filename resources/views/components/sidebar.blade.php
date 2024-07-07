@@ -21,9 +21,9 @@
             </li> --}}
 
 
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Manage data Kasir</span></a>
-                <ul class="dropdown-menu">
+            <li class="nav-item">
+
+
                     <li>
                         <a class="nav-link" href="{{ route('user.index') }}">Users</a>
                     </li>
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="{{ route('order.index') }}">Orders</a>
                     </li>
 
-                </ul>
+
 
             </li>
 
